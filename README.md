@@ -3,7 +3,7 @@ The COMASK20 was collected for research purpose of our work on recognition with 
 
 For the reference paper: **Masked Face Recognition with Convolutional Neural Networks and Local Binary Patterns**, please check [here]().
 
-This repository contains a README file for some instructions on using the data. 
+The repository is now attached with instructions on using the data. 
 
 ---
 ## **Hierarchical dataset structure**
@@ -26,6 +26,28 @@ Each folder of individual contains:
 - **Non-masked face images:** images containing face **without wearing** mask 
 
 Depend on your purpose, you can split the data into non-masked vs masked images by checking for the term **_"nomask"_** on the name of the file. All the files contains this term will be non-masked images and the rest should be masked ones.
+
+``` python
+# Python
+
+from imutils import paths
+
+all_image_paths = list(paths.list_images(folder))
+nomasked_imgs = [x for x in all_image_paths if x.lower().__contains__("nomask") is False]
+
+```
+```matlab
+% Matlab
+
+
+all_image_paths = [dir('*.jpg'); dir('*.png') ; dir('*.jpeg')];
+
+f=@(x) (append(x.folder, "/", x.name));
+full_paths = arrayfun(f, all_image_paths);
+
+nomasked_imgs = full_paths(contains(full_paths, "nomask") == 1);
+
+```
 
 ## **Contact**
 For further expand the data, you are welcome to send me (huongnm.ptit@gmail.com) an email attached with your personal pictures in 2 contexts: with and without mask. We will process the received pictures and add it to the repo afterwards.
