@@ -33,14 +33,14 @@ Depend on your purpose, you can split the data into non-masked vs masked images 
 from imutils import paths
 
 all_image_paths = list(paths.list_images(folder))
-nomasked_imgs = [x for x in all_image_paths if x.lower().__contains__("nomask") is False]
+nomasked_imgs = [x for x in all_image_paths if x.lower().__contains__("nomask")]
 
 ```
 ```matlab
 % Matlab
 
 
-all_image_paths = [dir('*.jpg'); dir('*.png') ; dir('*.jpeg')];
+all_image_paths = [dir('*.jpg'); dir('*.png'); dir('*.jpeg')];
 
 f=@(x) (append(x.folder, "/", x.name));
 full_paths = arrayfun(f, all_image_paths);
