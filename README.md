@@ -66,4 +66,4 @@ doi = {10.1007/s10489-021-02728-1}
 
 
 ## **Contact**
-For further expand the data, you are welcome to send me (huongnm.ptit@gmail.com) an email attached with your personal pictures in 2 contexts: with and without mask. We will process the received pictures and add it to the repo afterwards.
+For further expand the data, you are welcome to send me (huongnm.ptit@gmail.com) an email attached with your personal pictures in 2 contexts: with and without mask. We will process the received pictures and add them to the repo afterwards. Any questions related to the algorithm in the paper can also be sent to the same email for more support. 
